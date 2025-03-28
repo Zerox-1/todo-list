@@ -20,7 +20,7 @@ for (let i = 0; i < 4; i++) {
 
     const todoListElement = todoListComponent.getList();
 
-    for (let j = 0; j < 3; j++) {
+    for (let j = 0; j < 4; j++) {
         render(new TodoListItemComponent(), todoListElement, RenderPosition.BEFOREEND);
     }
 }
