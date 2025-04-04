@@ -4,7 +4,7 @@ import {createElement} from '../framework/render.js';
 function createTodoListComponentTemplate(title,status) {
     return (
         `<div class="todo-list-box">
-                <label class="todo-list-label-${status}">${title}</label>
+                <label class="todo-list-label-${status} todo-list-label">${title}</label>
                 <ul class="todo-list">
                 </ul>
             </div>`

@@ -33,54 +33,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 .todo-list-item {
-    list-style-type: none;
-    font-size: 20px;
-    min-height: max-content;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    background-color: white;
-    border-left: 5px solid #b0b0b0;
-    font-family: 'Open Sans', sans-serif;
-}
-.todo-list-item-backlog {display: flex; 
-    list-style-type: none;
-    font-size: 20px;
-    min-height: max-content;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    background-color: white;
-    border-left: 5px solid #b0b0b0;
-    font-family: 'Open Sans', sans-serif;
-}
-.todo-list-item-processing {display: flex; 
-    list-style-type: none;
-    font-size: 20px;
-    min-height: max-content;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    background-color: white;
-    border-left: 5px solid #7bf0e6;
-    font-family: 'Open Sans', sans-serif;
-}
-.todo-list-item-ready {display: flex; 
-    list-style-type: none;
-    font-size: 20px;
-    min-height: max-content;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 10px;
-    background-color: white;
-    border-left: 5px solid #26fd5c;
-    font-family: 'Open Sans', sans-serif;
-}
-.todo-list-item-bin {
     display: flex; 
     list-style-type: none;
     font-size: 20px;
@@ -90,8 +42,20 @@
     padding-bottom: 20px;
     border-radius: 10px;
     background-color: white;
-    border-left: 5px solid #d82424;
+    border-left: 5px solid #b0b0b0;
     font-family: 'Open Sans', sans-serif;
+}
+.todo-list-item-backlog {
+    border-left: 5px solid #b0b0b0;
+}
+.todo-list-item-processing {
+    border-left: 5px solid #7bf0e6;
+}
+.todo-list-item-ready {
+    border-left: 5px solid #26fd5c;
+}
+.todo-list-item-bin {
+    border-left: 5px solid #d82424;
 }
 body{
     background-color:#dff5f8;
@@ -121,48 +85,16 @@ body{
     background-color: #b0b0b0; font-family: 'Open Sans', sans-serif;
 }
 .todo-list-label-backlog{
-    font-size:20px;
-    width: max-content;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
-    color:#302f2f;
-    height: 35px;
-    background-color: #b0b0b0; font-family: 'Open Sans', sans-serif;
+    background-color: #b0b0b0;
 }
 .todo-list-label-processing{
-    font-size:20px;
-    width: max-content;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
-    color:#037474;
-    height: 35px;
-    background-color: #7bf0e6; font-family: 'Open Sans', sans-serif;
+    background-color: #7bf0e6;
 }
 
 .todo-list-label-ready{
-    font-size:20px;
-    width: max-content;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
-    color:#24910e;
-    height: 35px;
-    background-color: #26fd5c; font-family: 'Open Sans', sans-serif;
+    background-color: #26fd5c;
 }.todo-list-label-bin{
-    font-size:20px;
-    width: max-content;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
-    color:#380505;
-    height: 35px;
-    background-color: #d82424; font-family: 'Open Sans', sans-serif;
+    background-color: #d82424;
 }
 
 

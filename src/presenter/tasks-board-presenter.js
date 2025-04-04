@@ -26,13 +26,11 @@ export default class TasksBoardPresenter{
             const todoListComponent=new TodoListComponent({ title: StatusLabel[status] ,status:status});
             render(todoListComponent, this.tasksBoardComponent.getElement());
             const todoListElement = todoListComponent.getList();
-            for(let j=0;j<this.boardTasks.length;j++){
-                const task=this.boardTasks[j];
-                if(task.status==status){
-                    const taskComponent = new TodoListItemComponent({ task});
+            const statArray=this.boardTasks.filter(task => task.status === status);
+            statArray.forEach((task)=>{
+                const taskComponent = new TodoListItemComponent({ task});
                     render(taskComponent, todoListElement);
-                }
-            }
+            })
             if(status==Status.BIN){
                 const binButtonComponent=new BinButtonComponent();
                 render(binButtonComponent, todoListElement);
