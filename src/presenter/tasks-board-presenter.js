@@ -21,7 +21,7 @@ export default class TasksBoardPresenter{
     init() {
         this.boardTasks = this.tasksModel.getTasks();
         render(this.tasksBoardComponent, this.boardContainer);        
-        for(let i=0;i<4;i++){
+        for(let i=0;i<Object.keys(StatusI).length;i++){
             const status=StatusI[i];
             const todoListComponent=new TodoListComponent({ title: StatusLabel[status] ,status:status});
             render(todoListComponent, this.tasksBoardComponent.getElement());
