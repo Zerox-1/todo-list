@@ -18,7 +18,8 @@ export const tasks =[
         id: "4",
         title: "Выпить смузи",
         status: "processing",
-    },
+    }
+    ,
     {
         id: "5",
         title: "Позвонить маме",
@@ -28,7 +29,8 @@ export const tasks =[
         id: "6",
         title: "Попить воды",
         status: "ready",
-    },
+    }    
+    ,
     {
         id: "7",
         title: "Погладить кота",
