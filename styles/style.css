@@ -32,101 +32,71 @@
     margin-left: 50px;
     font-family: 'Open Sans', sans-serif;
 }
-.backlog-item{
+.todo-list-item {
+    display: flex; 
     list-style-type: none;
-    font-size:20px;
-    height: 40px;
+    font-size: 20px;
+    min-height: max-content;
     padding-left: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 10px;
     background-color: white;
     border-left: 5px solid #b0b0b0;
     font-family: 'Open Sans', sans-serif;
 }
-.inprocess-item{
+
+.todo-list-item-mock{
+    display: flex; 
     list-style-type: none;
-    font-size:20px;
-    height: 40px;
+    font-size: 20px;
+    min-height: max-content;
     padding-left: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 10px;
-    background-color: white;
-    border-left: 5px solid rgb(97, 255, 255); font-family: 'Open Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    color: #b0b0b0;
+    border: 5px dotted #b0b0b0;
+    font-family: 'Open Sans', sans-serif;
 }
-.ready-item{
-    list-style-type: none;
-    font-size:20px;
-    height: 40px;
-    padding-left: 20px;
-    padding-top: 10px;
-    border-radius: 10px;
-    background-color: white;
-    border-left: 5px solid #6ef572 ; font-family: 'Open Sans', sans-serif;
+.todo-list-item-backlog {
+    border-left: 5px solid #b0b0b0;
 }
-.bin-item{
-    list-style-type: none;
-    font-size:20px;
-    height: 40px;
-    padding-left: 20px;
-    padding-top: 10px;
-    border-radius: 10px;
-    background-color: white;
-    border-left: 5px solid #ee7777; font-family: 'Open Sans', sans-serif;
-} 
-.todo-list-backlog{
-    padding-left: 0%;
-    display:grid;
-    row-gap: 10px;
+.todo-list-item-processing {
+    border-left: 5px solid #7bf0e6;
 }
-.todo-list-inprocess{
-    padding-left: 0%;
-    display:grid;
-    row-gap: 10px;
-} 
-.todo-list-ready{
-    padding-left: 0%;
-    display:grid;
-    row-gap: 10px;
-}  
-.todo-list-bin{
-    padding-left: 0%;
-    display:grid;
-    row-gap: 10px;
-} 
-.backlog-todo-list-box{
-    height: max-content;
-    row-gap: 10px;
-    width: 25%;
-    display: grid;
-    margin-left: 50px;
+.todo-list-item-ready {
+    border-left: 5px solid #26fd5c;
 }
-.bin-todo-list-box{
-    height: max-content;
-    row-gap: 10px;
-    width: 25%;
-    display: grid;
-    margin-left: 20px;
-    margin-right: 50px;
-}
-.ready-todo-list-box{
-    height: max-content;
-    row-gap: 10px;
-    width: 25%;
-    display: grid;
-    margin-left: 20px;
-}
-.inprocces-todo-list-box{
-    height: max-content;
-    row-gap: 10px;
-    width: 25%;
-    display: grid;
-    margin-left: 20px;
+.todo-list-item-bin {
+    border-left: 5px solid #d82424;
 }
 body{
     background-color:#dff5f8;
 }
-
-.backlog-label{
+.task--input{
+    pointer-events: none;
+    width: 85%;
+    color: black;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.task--input-mock{
+    pointer-events: none;
+    width: 85%;
+    color: #b0b0b0;
+    outline: none;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.task__edit{
+    border: none;
+    outline: none; 
+    background-color: rgba(255, 255, 255, 0);
+}
+.todo-list-label{
     font-size:20px;
     width: max-content;
     padding-left: 10px;
@@ -137,56 +107,44 @@ body{
     height: 35px;
     background-color: #b0b0b0; font-family: 'Open Sans', sans-serif;
 }
-.inprocess-label{
-    font-size:20px;
-    width: max-content;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
-    color:rgb(34, 94, 94);
-    height: 35px;
-    background-color:rgb(97, 255, 255); font-family: 'Open Sans', sans-serif;
+.todo-list-label-backlog{
+    background-color: #b0b0b0;
 }
-.ready-label{
-    font-size:20px;
-    width: max-content;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
-    color:#207923;
-    height: 35px;
-    background-color: #6ef572; font-family: 'Open Sans', sans-serif;
-}
-.bin-label{
-    font-size:20px;
-    width: max-content;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
-    color:#811a1a;
-    height: 35px;
-    background-color: #ee7777; font-family: 'Open Sans', sans-serif;
-}
-   
-.lists-box{
-    width: 100%;
-    padding-top:50px;
-    display: flex;
+.todo-list-label-processing{
+    background-color: #7bf0e6;
 }
 
-.clear-button{
-    font-size:20px;
-    width: 100%;
-    
-    height: 50px;
-    border-radius: 10px;
+.todo-list-label-ready{
+    background-color: #26fd5c;
+}.todo-list-label-bin{
     background-color: #d82424;
-    color:white; font-family: 'Open Sans', sans-serif;
 }
 
+
+.todo-list{
+    padding-left: 0%;
+    display:grid;
+    row-gap: 15px;
+
+    min-height: 100%;
+}
+.todo-list > *:last-child {
+    margin-bottom: 100%;
+}
+
+.todo-lists-space{
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    column-gap: 50px;
+}
+.todo-list-box{
+    height: max-content;
+    width: 25%;
+    display: grid;
+}
 .new-item-input{
     height: 100%-2px;
     flex: 1; 
@@ -214,3 +172,59 @@ body{
 }
 
 
+.clear-button{
+    font-size:20px;
+    width: 100%;
+    
+    height: 50px;
+    border-radius: 10px;
+    background-color: #d82424;
+    color:white; font-family: 'Open Sans', sans-serif;
+}
+.clear-button:disabled {
+    background-color: #47120d;
+    filter: brightness(0.8);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+.loading-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    z-index: 1000;
+  }
+  
+  .loading-view__spinner {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    border: 5px solid #e0e0e0;
+    border-top-color: #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .loading-view__text {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
